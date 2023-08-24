@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block content %}
+<p>Test your vocabulary and memory with our Boggle Game!</p>
+<p><b>Instructions:</b> Connect letters adjacent(next) or diagonal to each other to form words. When connecting letters, you may <b>not</b> use the same cube more than once. Now you are ready, click the play button!</p>
+
+<form action="/start">
+    <button>Start Game!</button>
+</form>
+{% endblock %}

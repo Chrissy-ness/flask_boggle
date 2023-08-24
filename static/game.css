@@ -1,0 +1,38 @@
+/* CSS for the words used and table. */
+
+#table-container {
+    display: flex;
+    border: 2px solid grey;
+    width: 800px;
+    justify-content: space-evenly;
+}
+
+#words-container {
+    display: flex;
+    flex-direction: column;
+    width: 58%;
+    margin: 4px;
+}
+
+#words-holder {
+    border: 1px double black;
+    flex-grow: 1;
+}
+
+/* ---table--- */
+
+table, tr, td {
+    border: 1px solid black;
+}
+
+table {
+    margin: 5px;
+}
+
+td {
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    border-radius: 10px;
+}
+

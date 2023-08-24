@@ -1,0 +1,26 @@
+how to access variables in the boogle class:
+
+boogle = Boogle()
+
+function read_dict(self, dict_path):
+- opens file path 
+- strip function removes leading and trailing spaces of the given string. 
+- Loops through the given file and strips the spaces for each value found. 
+- closes the file
+- returns a list of words from file. 
+
+
+function make_board(self):
+- creates an empty list called 'board'.
+- iterates through the range of 5, starting from number 0 to 4. 
+- generate a 5 x 5 board at which in each iteration of 'y' a row of 5 random uppercased letters from string is chosen. 
+- appends each row to the board. 
+- returns the board. 
+
+function check_valid_words(self, board, word):
+- word_exists checks if word exists in the returned dictionary from the .words method. 
+- valid_word checks if word is in the board. 
+
+function find_from(self, board, word, y, x, seen):
+- recursive function that checks the word's letters one by one, until the last letter is found to match. 
+- will return false if the paths checked are dead. This means that even though a letter matched the first letter, the surrounding letters doesn't.

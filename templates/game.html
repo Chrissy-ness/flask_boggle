@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>Instructions:</b> Connect letters adjacent(next) or diagonal to each other to form words. When connecting letters, you may <b>not</b> use the same cube more than once.</p>
+
+    <tr>
+        <td>Total:</td>
+        <td>0</td>
+    </tr>
+    <div id="table-container">
+        <div id="words-container">
+            <div id="title">WORDS USED</div>
+            <div id="words-holder">
+                <ul>
+                {% for word in session["words"] %}
+                    <li>{{word}}</li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <table>
+            {% for row in board %}
+            <tr>
+                {% for letter in row %}
+                <td class="{{letter}}">{{letter}}</td>
+                {% endfor%}
+            </tr>
+            {% endfor %} 
+        </table>
+       
+    </div>
+
+    <form>
+        <p>Type the word here and enter</p>
+        <input id="answer" type="text-area" placeholder="Think... bzz.. bzz..">
+        <button id="submit">Submit</button>
+    </form>
+    
+    
+{% endblock %}
